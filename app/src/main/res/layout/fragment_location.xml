@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.auth.SplashFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/screen_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="@font/aceh"
+        android:gravity="center"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="@string/location"
+        android:textAllCaps="true"
+        android:textColor="@color/navy_blue"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/round_bg_less"
+        android:backgroundTint="@color/yellow_skin"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/_6sdp"
+        android:fontFamily="@font/aceh"
+        android:gravity="start"
+        android:hint="@string/search"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint_lyt_grey"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivMap"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:background="@drawable/rounded_trans_bg_white_boder"
+                android:drawableEnd="@drawable/ic_down"
+                android:drawableTint="@color/orange"
+                android:fontFamily="@font/aceh"
+                android:gravity="start"
+                android:textColorHint="@color/hint_grey"
+                android:lineSpacingExtra="5dp"
+                android:enabled="false"
+                android:padding="@dimen/_8sdp"
+                android:hint="@string/address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMap" />
+
+            <EditText
+                android:id="@+id/tvCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:background="@drawable/rounded_trans_bg_white_boder"
+                android:drawableEnd="@drawable/ic_down"
+                android:drawableTint="@color/orange"
+                android:fontFamily="@font/aceh"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:textColorHint="@color/hint_grey"
+                android:padding="@dimen/_8sdp"
+                android:enabled="false"
+                android:hint="@string/city"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+            <EditText
+                android:id="@+id/tvState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:background="@drawable/rounded_trans_bg_white_boder"
+                android:drawableEnd="@drawable/ic_down"
+                android:drawableTint="@color/orange"
+                android:fontFamily="@font/aceh"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:textColorHint="@color/hint_grey"
+                android:padding="@dimen/_8sdp"
+                android:hint="@string/state"
+                android:enabled="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+            <EditText
+                android:id="@+id/tvZipcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:background="@drawable/rounded_trans_bg_white_boder"
+                android:drawableEnd="@drawable/ic_down"
+                android:drawableTint="@color/orange"
+                android:fontFamily="@font/aceh"
+                android:gravity="start"
+                android:enabled="false"
+                android:textColorHint="@color/hint_grey"
+                android:lineSpacingExtra="5dp"
+                android:padding="@dimen/_8sdp"
+                android:hint="@string/postal_code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvState" />
+
+            <TextView
+                android:id="@+id/btnStartServiceNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/round_bg"
+                android:backgroundTint="@color/sky_blue"
+                android:fontFamily="@font/aceh"
+                android:paddingStart="@dimen/_45sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_45sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/start_service_now"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvZipcode"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/tvZipcode"
+                app:layout_constraintTop_toBottomOf="@+id/tvZipcode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <size
+                android:width="@dimen/_50sdp"
+                android:height="@dimen/_50sdp" />
+            <solid android:color="@color/lytgreen" />
+            <corners android:radius="@dimen/_100sdp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_tick_white" android:left="@dimen/_10sdp" android:top="@dimen/_10sdp"
+        android:width="@dimen/_28sdp" android:height="@dimen/_28sdp"/>
+</layer-list>

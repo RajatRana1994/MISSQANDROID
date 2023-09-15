@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.auth.SplashFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBooking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:background="@color/orange"
+        android:padding="@dimen/_14sdp"
+        android:text="@string/bookings"
+        android:textAlignment="textStart"
+        android:textColor="#01579B"
+        android:fontFamily="@font/helvetica"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvPrev"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:gravity="start"
+        android:hint=""
+        android:minWidth="@dimen/_100sdp"
+        android:padding="@dimen/_5sdp"
+        android:singleLine="true"
+        android:fontFamily="@font/helvetica"
+        android:text="Prev"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_lyt_grey"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCurrent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBooking" />
+
+    <TextView
+        android:id="@+id/tvCurrent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:gravity="center"
+        android:hint=""
+        android:fontFamily="@font/helvetica"
+        android:minWidth="@dimen/_100sdp"
+        android:padding="@dimen/_5sdp"
+        android:singleLine="true"
+        android:text="Current"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_lyt_grey"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tvNext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPrev"
+        app:layout_constraintTop_toBottomOf="@+id/tvBooking" />
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:gravity="end"
+        android:hint=""
+        android:minWidth="@dimen/_100sdp"
+        android:fontFamily="@font/helvetica"
+        android:padding="@dimen/_5sdp"
+        android:singleLine="true"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_lyt_grey"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvCurrent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBooking" />
+
+
+    <include
+        android:id="@+id/calView"
+        layout="@layout/content_calender_with_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrders"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calView"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_booking_pro" />
+
+    <TextView
+        android:id="@+id/tvNoBookings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:gravity="center"
+        android:hint=""
+        android:minWidth="@dimen/_100sdp"
+        android:padding="@dimen/_5sdp"
+        android:visibility="visible"
+        android:fontFamily="@font/helvetica"
+        android:singleLine="true"
+        android:text="@string/no_booking_found"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_lyt_grey"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvOrders" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_orange"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        app:itemIconTint="@drawable/selector_navigation"
+        android:visibility="gone"
+        app:itemTextColor="@drawable/selector_navigation"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavProvider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/home_menus" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNavProvider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_orange"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/tabHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_bg_less_more"
+            android:backgroundTint="@color/sky_blue_dark"
+            android:minHeight="@dimen/_50sdp"
+            android:src="@drawable/home_pro_tab"
+            android:minWidth="@dimen/_36sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tabBookings"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tabBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_bg_less_more"
+            android:backgroundTint="@android:color/transparent"
+            android:minHeight="@dimen/_50sdp"
+            android:src="@drawable/bookings_pro_tab"
+            android:minWidth="@dimen/_36sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tabWallet"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tabHome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tabWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_bg_less_more"
+            android:backgroundTint="@android:color/transparent"
+            android:minHeight="@dimen/_50sdp"
+            android:src="@drawable/wallet_pro_tab"
+            android:minWidth="@dimen/_36sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tabProfile"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tabBookings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tabProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_bg_less_more"
+            android:backgroundTint="@android:color/transparent"
+            android:minHeight="@dimen/_50sdp"
+            android:src="@drawable/profile_pro_tab"
+            android:minWidth="@dimen/_36sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tabSettings"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tabWallet"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tabSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_bg_less_more"
+            android:backgroundTint="@android:color/transparent"
+            android:minHeight="@dimen/_50sdp"
+            android:src="@drawable/settings_pro_tab"
+            android:minWidth="@dimen/_36sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tabProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

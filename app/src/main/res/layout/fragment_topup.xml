@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.auth.SplashFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallet_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_mid_2"
+        android:fontFamily="@font/helvetica"
+        android:gravity="start"
+        android:paddingStart="@dimen/_40sdp"
+        android:paddingTop="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_14sdp"
+        android:text="@string/top_up_pay"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_32sdp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topupInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/orange_mid_2"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/lblSelectTopup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="start"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/select_a_top_up_value"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/topup100"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/topup_bg_less"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 100"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/topup200"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectTopup" />
+
+                <TextView
+                    android:id="@+id/topup200"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/topup_bg_less"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 200"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/topup300"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/topup100"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectTopup" />
+
+                <TextView
+                    android:id="@+id/topup300"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/topup_bg_less"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 300"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/topup200"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectTopup" />
+
+                <TextView
+                    android:id="@+id/topup500"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/topup_bg_less"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 500"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/topup1000"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topup100" />
+
+                <TextView
+                    android:id="@+id/topup1000"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/topup_bg_less"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 1000"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/topup2000"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/topup500"
+                    app:layout_constraintTop_toBottomOf="@+id/topup100" />
+
+                <TextView
+                    android:id="@+id/topup2000"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/topup_bg_less"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 2000"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/topup1000"
+                    app:layout_constraintTop_toBottomOf="@+id/topup100" />
+
+                <TextView
+                    android:id="@+id/topupSelected"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:alpha="0.2"
+                    android:background="@color/black"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/topup100"
+                    app:layout_constraintEnd_toEndOf="@id/topup100"
+                    app:layout_constraintStart_toStartOf="@+id/topup100"
+                    app:layout_constraintTop_toTopOf="@+id/topup100" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paymentMethodInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/orange_mid_2"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topupInfo">
+
+                <TextView
+                    android:id="@+id/lblSelectPaymentMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="start"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Select preffered payment method."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:drawableStart="@drawable/stripe_bg"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Pay Mongo Payment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectPaymentMethod" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summaryInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/orange_mid_2"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentMethodInfo">
+
+                <TextView
+                    android:id="@+id/lblSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="start"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/summary"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/payment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSummary" />
+
+                <TextView
+                    android:id="@+id/tvPaymentAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="₱ 100.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tvPayment"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/lblSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:background="@drawable/round_bg"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/summaryInfo"
+                app:layout_constraintStart_toStartOf="@+id/summaryInfo"
+                app:layout_constraintTop_toBottomOf="@+id/summaryInfo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

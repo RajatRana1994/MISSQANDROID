@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF8000</color>
+    <color name="colorPrimaryDark">#FF8000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="navy_blue">#0D85B0</color>
+    <color name="red">#FF6666</color>
+    <color name="brown">#9B6006</color>
+    <color name="sky_blue">#71CFFF</color>
+    <color name="blue">#0C95FF</color>
+    <color name="sky_blue_dark">#20B4FF</color>
+    <color name="lytgreen">#66F161</color>
+    <color name="green">#6CD279</color>
+    <color name="dark_green">#18B82C</color>
+    <color name="hint_grey">#ABA0A0</color>
+    <color name="gray">#ABA0A0</color>
+    <color name="hint_lyt_grey">#CFCDCD</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FCFC49</color>
+    <color name="color_chat_receiver">#BCBCAC</color>
+    <color name="color_chat_sender">#F5F5AB</color>
+    <color name="dark_orange">#FF8F20</color>
+    <color name="orange">#FD9F00</color>
+    <color name="trans_white">#59FFFFFF</color>
+    <color name="orange_mid">#FDC966</color>
+    <color name="orange_mid_2">#FFB41D</color>
+    <color name="yellow_skin">#FEEDCB</color>
+    <color name="yellow_skin_dark">#F1DA99</color>
+    <color name="orange_btn">#FFB45E</color>
+</resources>

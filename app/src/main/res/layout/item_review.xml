@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:background="@drawable/round_bg_orange_border"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingTop="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivService"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_logo"
+        app:riv_corner_radius="@dimen/_30sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView 
+        android:fontFamily="@font/aceh"
+        android:id="@+id/tvCustomer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:maxWidth="@dimen/_80sdp"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:text="Housekeeper"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivService"
+        app:layout_constraintTop_toTopOf="@+id/ivService" />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:progressTint="@color/orange_btn"
+
+        android:rating="2"
+        app:layout_constraintStart_toStartOf="@+id/tvCustomer"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustomer" />
+
+    <TextView 
+        android:fontFamily="@font/aceh"
+        android:id="@+id/tvService"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_6sdp"
+        android:maxWidth="@dimen/_80sdp"
+        android:minLines="2"
+        android:text="Rating comment"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivService"
+        app:layout_constraintTop_toBottomOf="@+id/rbRating" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

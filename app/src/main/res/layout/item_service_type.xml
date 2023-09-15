@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_4sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivService"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/_20sdp"
+        android:src="@drawable/app_logo"
+        app:layout_constraintEnd_toEndOf="@+id/tvService"
+        app:layout_constraintStart_toStartOf="@+id/tvService"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView 
+        android:fontFamily="@font/aceh"
+        android:id="@+id/tvService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="Housekeeper"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:maxLines="2"
+        android:maxWidth="@dimen/_85sdp"
+        android:minWidth="@dimen/_50sdp"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivService" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

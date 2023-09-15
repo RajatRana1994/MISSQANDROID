@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_4sdp"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/round_bg_less">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivUser"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:src="@drawable/app_logo"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:riv_corner_radius="@dimen/_20sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/llORDERS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/llORDERS" />
+
+    <LinearLayout
+        android:id="@+id/llORDERS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvCurrentService"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView 
+        android:fontFamily="@font/aceh"
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="September 15,2021"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView 
+        android:fontFamily="@font/aceh"
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Ms Karen Hub"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView 
+        android:fontFamily="@font/aceh"
+            android:id="@+id/tvOrderNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="RFG 2345678996"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
+    <TextView 
+        android:fontFamily="@font/aceh"
+        android:id="@+id/tvCurrentService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:minWidth="@dimen/_60sdp"
+        android:text="3 Services"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/llORDERS"
+        app:layout_constraintEnd_toStartOf="@+id/tvCancelledStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llORDERS"
+        app:layout_constraintTop_toTopOf="@+id/llORDERS" />
+
+    <TextView 
+        android:fontFamily="@font/aceh"
+        android:id="@+id/tvCancelledStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:minWidth="@dimen/_50sdp"
+        android:text="@string/ongoing"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCurrentService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvCurrentService"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrentService" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

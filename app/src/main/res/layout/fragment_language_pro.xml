@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.auth.SplashFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView 
+        android:fontFamily="@font/aceh"
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_mid"
+        android:paddingStart="@dimen/_32sdp"
+        android:paddingTop="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_14sdp"
+        android:text="@string/language"
+        android:textAlignment="textStart"
+        android:textColor="@color/navy_blue"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/langConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/dark_orange"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckedTextView
+            android:id="@+id/selectedBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/selector_language_bg"
+
+            android:checked="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/cbENGLISH"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cbENGLISH" />
+
+
+        <CheckedTextView
+            android:id="@+id/cbENGLISH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_language_bg"
+            android:checked="true"
+            android:drawableStart="@drawable/selector_language"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="ENGLISH"
+
+            android:textColor="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckedTextView
+            android:id="@+id/cbSPANISH"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/selector_language_bg"
+            android:checked="false"
+            android:drawableStart="@drawable/selector_language"
+            android:drawablePadding="@dimen/_5sdp"
+
+            android:paddingTop="@dimen/_3sdp"
+
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="SPANISH"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/cbENGLISH"
+            app:layout_constraintStart_toStartOf="@id/cbENGLISH"
+            app:layout_constraintTop_toBottomOf="@+id/cbENGLISH" />
+
+        <CheckedTextView
+            android:id="@+id/cbCHINESE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/selector_language_bg"
+            android:checked="false"
+            android:drawableStart="@drawable/selector_language"
+            android:drawablePadding="@dimen/_5sdp"
+
+            android:paddingTop="@dimen/_3sdp"
+
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="CHINESE"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/cbENGLISH"
+            app:layout_constraintStart_toStartOf="@id/cbENGLISH"
+            app:layout_constraintTop_toBottomOf="@+id/cbSPANISH" />
+
+        <CheckedTextView
+            android:id="@+id/cbINDIAN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/selector_language_bg"
+            android:checked="false"
+            android:drawableStart="@drawable/selector_language"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="INDIAN"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/cbENGLISH"
+            app:layout_constraintStart_toStartOf="@id/cbENGLISH"
+            app:layout_constraintTop_toBottomOf="@+id/cbCHINESE" />
+
+        <CheckedTextView
+            android:id="@+id/cbARABIC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/selector_language_bg"
+            android:checked="false"
+            android:drawableStart="@drawable/selector_language"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="ARABIC"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/cbENGLISH"
+            app:layout_constraintStart_toStartOf="@id/cbENGLISH"
+            app:layout_constraintTop_toBottomOf="@+id/cbINDIAN" />
+
+        <CheckedTextView
+            android:id="@+id/cbFRENCH"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/selector_language_bg"
+            android:checked="false"
+            android:drawableStart="@drawable/selector_language"
+            android:drawablePadding="@dimen/_5sdp"
+
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="FRENCH"
+            android:textColor="@color/white"
+
+            app:layout_constraintEnd_toEndOf="@id/cbENGLISH"
+            app:layout_constraintStart_toStartOf="@id/cbENGLISH"
+            app:layout_constraintTop_toBottomOf="@+id/cbARABIC" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

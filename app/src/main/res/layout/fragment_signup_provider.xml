@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.auth.SplashFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/screen_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/sign_up"
+        android:textColor="@color/navy_blue"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTagLine">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/innerConst"
+                android:layout_width="match_parent"
+                android:background="@drawable/top_round_trans_bg_lyt_orange_border"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtFullName"
+                    app:layout_constraintTop_toTopOf="@+id/edtFullName"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtFullName" />
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtFullName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/name"
+                    android:inputType="textCapWords"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtAddress"
+                    app:layout_constraintTop_toTopOf="@+id/edtAddress"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtAddress" />
+
+                <TextView
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/address"
+                    android:inputType="textCapSentences"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtFullName" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:alpha="0.6"
+                    app:layout_constraintStart_toStartOf="@+id/edtAddress"
+                    app:layout_constraintEnd_toEndOf="@+id/edtAddress"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtAddress"
+                    android:background="@color/orange_mid"/>
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtAddress2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+                    android:inputType="textCapSentences"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtAddress" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtPhone"
+                    app:layout_constraintEnd_toStartOf="@+id/edtPhone"
+                    app:layout_constraintTop_toTopOf="@+id/edtPhone" />
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/city"
+                    android:inputType="textCapWords"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtAddress2" />
+                <ImageView
+                    android:id="@+id/dotCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtCity"
+                    app:layout_constraintTop_toTopOf="@+id/edtCity"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtCity" />
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+                    android:visibility="gone"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/state"
+                    android:inputType="textCapWords"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCity" />
+
+                <ImageView
+                    android:id="@+id/dotState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtState"
+                    app:layout_constraintEnd_toStartOf="@+id/edtState"
+                    app:layout_constraintTop_toTopOf="@+id/edtState" />
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtZip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/postal_code"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtState" />
+
+                <ImageView
+                    android:id="@+id/dotZip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtZip"
+                    app:layout_constraintEnd_toStartOf="@+id/edtZip"
+                    app:layout_constraintTop_toTopOf="@+id/edtZip" />
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+                    android:drawablePadding="@dimen/_10sdp"
+
+                    android:fontFamily="@font/helvetica"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtZip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtEmail"
+                    app:layout_constraintTop_toTopOf="@+id/edtEmail"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtEmail" />
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtBirthDate"
+                    app:layout_constraintTop_toTopOf="@+id/edtBirthDate"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtBirthDate" />
+
+                <TextView
+                    android:id="@+id/edtBirthDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/birth_date"
+                    android:inputType="date"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtPicture"
+                    app:layout_constraintTop_toTopOf="@+id/edtPicture"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtPicture" />
+
+                <TextView
+                    android:id="@+id/edtPicture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawableEnd="@drawable/ic_circle_dropdown"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/picture_selfie"
+                    android:inputType="date"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtBirthDate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtNBIClearance"
+                    app:layout_constraintTop_toTopOf="@+id/edtNBIClearance"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtNBIClearance" />
+
+                <TextView
+                    android:id="@+id/edtNBIClearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawableEnd="@drawable/ic_circle_dropdown"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/nbi_clearance_upload_file"
+                    android:inputType="date"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPicture" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_signup_dot"
+                    app:layout_constraintEnd_toStartOf="@+id/edtPrimaryID"
+                    app:layout_constraintTop_toTopOf="@+id/edtPrimaryID"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtPrimaryID" />
+
+                <TextView
+                    android:id="@+id/edtPrimaryID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawableEnd="@drawable/ic_circle_dropdown"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/primary_id_upload_file"
+                    android:inputType="date"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtNBIClearance" />
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPrimaryID" />
+
+                <EditText
+                    android:fontFamily="@font/helvetica"
+                    android:id="@+id/edtConPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/orange_mid"
+
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvSERVICES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/services"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/innerConst" />
+
+            <!--<CheckedTextView
+                android:id="@+id/cbHousekeepingNc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/selector_dot_check"
+                android:drawablePadding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:text="Housekeeping nc2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvSERVICES"
+                app:layout_constraintTop_toBottomOf="@+id/tvSERVICES" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="( optional )"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cbHousekeepingNc2"
+                app:layout_constraintStart_toEndOf="@+id/cbHousekeepingNc2"
+                app:layout_constraintTop_toTopOf="@+id/cbHousekeepingNc2" />
+
+            <CheckedTextView
+                android:id="@+id/cbNannyNc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/selector_dot_check"
+                android:drawablePadding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:text="Nanny nc2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvSERVICES"
+                app:layout_constraintTop_toBottomOf="@+id/cbHousekeepingNc2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="( optional )"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cbNannyNc2"
+                app:layout_constraintStart_toEndOf="@+id/cbNannyNc2"
+                app:layout_constraintTop_toTopOf="@+id/cbNannyNc2" />
+
+            <CheckedTextView
+                android:id="@+id/cbMassageNc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/selector_dot_check"
+                android:drawablePadding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:text="Massage nc2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvSERVICES"
+                app:layout_constraintTop_toBottomOf="@+id/cbNannyNc2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="( optional )"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cbMassageNc2"
+                app:layout_constraintStart_toEndOf="@+id/cbMassageNc2"
+                app:layout_constraintTop_toTopOf="@+id/cbMassageNc2" />
+
+            <CheckedTextView
+                android:id="@+id/cbHaircutNc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/selector_dot_check"
+                android:drawablePadding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:text="Haircut nc2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvSERVICES"
+                app:layout_constraintTop_toBottomOf="@+id/cbMassageNc2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="( optional )"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cbHaircutNc2"
+                app:layout_constraintStart_toEndOf="@+id/cbHaircutNc2"
+                app:layout_constraintTop_toTopOf="@+id/cbHaircutNc2" />
+
+            <CheckedTextView
+                android:id="@+id/cbChildTutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/selector_dot_check"
+                android:drawablePadding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:text="Child Tutor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvSERVICES"
+                app:layout_constraintTop_toBottomOf="@+id/cbHaircutNc2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="( College undergrad\nat least 2 years of college )"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintStart_toEndOf="@+id/cbChildTutor"
+                app:layout_constraintTop_toTopOf="@+id/cbChildTutor" />
+-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_40sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSERVICES"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:buttonTint="@color/white"
+                android:checked="true"
+                android:text="@string/i_accept_agree_to_the"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@+id/innerConst"
+                app:layout_constraintTop_toBottomOf="@+id/rvServices"
+                app:layout_goneMarginStart="@dimen/_24sdp" />
+
+            <TextView
+                android:id="@+id/cbTermsLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:checked="true"
+                android:text="@string/terms_conditions"
+                android:textColor="@color/sky_blue"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cbTerms"
+                app:layout_constraintStart_toEndOf="@+id/cbTerms"
+                app:layout_constraintTop_toTopOf="@+id/cbTerms"
+                app:layout_goneMarginStart="@dimen/_24sdp" />
+
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:background="@drawable/round_bg"
+                android:backgroundTint="@color/sky_blue"
+                android:paddingStart="@dimen/_45sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_45sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/submit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbTerms" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
